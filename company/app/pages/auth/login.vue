@@ -193,7 +193,7 @@ const validateKey = (key: keyof typeof formInput.value) => {
 const loginWithGoogle = () => {
   try {
     window.open(
-      "https://api.cvconnect.quannm32.me/api/v1/user/oauth2/authorization/google",
+      "http://api.cvconnect.quannm32.me/api/v1/user/oauth2/authorization/google",
     );
   } catch (err) {
     console.error(err);
