@@ -16,4 +16,4 @@ docker network inspect cvconnect-network >/dev/null 2>&1 || docker network creat
 echo "Run New Containers"
 docker run -d --restart=unless-stopped --name cvconnect-fe --network cvconnect-network -p 3000:3000 $DOCKER_USERNAME/cvconnect-fe:latest
 
-echo "Deployment Completed"
+echo "Deployment Completed!"
