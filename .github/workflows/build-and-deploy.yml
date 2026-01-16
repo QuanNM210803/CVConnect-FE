@@ -61,13 +61,13 @@ jobs:
             docker stop cvconnect-fe || true
             docker rm cvconnect-fe || true
           
-            docker network inspect cvconnect-network >/dev/null 2>&1 \
-              || docker network create cvconnect-network
+            docker network inspect common-network >/dev/null 2>&1 \
+              || docker network create common-network
           
             docker run -d \
               --restart=unless-stopped \
               --name cvconnect-fe \
-              --network cvconnect-network \
+              --network common-network \
               -p 3000:3000 \
               ${{ secrets.DOCKER_USERNAME }}/cvconnect-fe:latest
           EOF
